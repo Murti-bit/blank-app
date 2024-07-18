@@ -8,41 +8,41 @@ def X1(ht): # usia
         return 0
 def X2(jk): #jenis kelamin
     if (jk=='L'):
-        return 7
+        return -48
     elif(jk=='P'):
-        return -2
+        return 14
     else:
         return 0
 
 def X3(ht): #HT
     if (ht=='Ya'):
-        return -9
+        return 1
     elif(ht=='Tidak'):
-        return 2
+        return 0
     else:
         return 0
 
 def X4(ht):  #lama setelah
-    if (ht>5.5 and ht!=0.0):
-        return 1
-    elif(ht<=5.5):
-        return -8
+    if (ht<5.5 and ht!=0.0):
+        return -10
+    elif(ht>=5.5):
+        return 79
     else:
         return 0
 
 def X5(ht):  #lama terapi
-    if (ht>6.5 and ht!=0.0):
-        return 9
-    elif(ht<=6.5):
-        return -3
+    if (ht<22.5 and ht!=0.0):
+        return -109
+    elif(ht>=22.5):
+        return 36
     else:
         return 0
     
 def X6(ht): #LHR
-    if (ht>4.5):
-        return 3
-    elif(ht<=4.5 and ht!=0):
-        return -8
+    if (ht<4.5):
+        return -9
+    elif(ht>=4.5 and ht!=0):
+        return 25
     else:
         return 0
 
@@ -53,41 +53,41 @@ def X7(ht): #PE
         return 1
  
 def X8(ht): #rtds
-    if (ht<126.4):
-        return -5
-    elif(ht>=126.4 and ht!=0):
-        return 8
+    if (ht<126.5):
+        return -17
+    elif(ht>=126.5 and ht!=0):
+        return 28
     else:
         return 0
 
 def X9(ht): #rtdd
     if (ht<79.5):
-        return -6
+        return 32
     elif(ht>=79.5 and ht!=0):
-        return 18
+        return -95
     else:
         return 0
 def X10(ht): #map
     if (ht<90.6):
-        return -7
+        return 6
     elif(ht>=90.6 and ht!=0):
-        return 9
+        return -8
     else:
         return 0
 
 def X11(ht): #imt
     if (ht<22.7):
-        return -6
+        return 16
     elif(ht>=22.7 and ht!=0):
-        return 12
+        return -32
     else: 
         return 0
 
 def X12(ht):
     if (ht<2.36):
-        return -13
+        return 131
     elif(ht>=2.36 and ht!=0):
-        return 6
+        return -60
     else: 
         return 0 
 st.markdown("""
