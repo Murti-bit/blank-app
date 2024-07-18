@@ -162,7 +162,7 @@ with right:
         x12=float(x12)  
 with right1:
     total=X1(x1)+X2(x2)+X3(x3)+X4(x4)+X5(x5)+X6(x6)+X8(x8)+X9(x9)+X10(x10)+X11(x11)+X12(x12)+18
-    st.write(X1(x1),X2(x2),X3(x3),X4(x4),X5(x5),X6(x6),X8(x8),X9(x9),X10(x10),X11(x11),X12(x12),18)
+    st.write(X1(x1),X2(x2),X3(x3),X4(x4),X5(x5),X6(x6),X8(x8),X9(x9),X10(x10),X11(x11),X12(x12),18,26.5)
    
     st.write('skor total',total)   
     x12=st.button("Prediksi")
