@@ -1,9 +1,9 @@
 import streamlit as st
 def X1(ht): # usia
     if (ht>=27.5):
-        return 13
+        return 1
     elif(ht<27.5 and ht!=0):
-        return -3
+        return 0
     else: 
         return 0
 def X2(jk): #jenis kelamin
