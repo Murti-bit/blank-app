@@ -1,8 +1,8 @@
 import streamlit as st
 def X1(ht): # usia
-    if (ht>=27.5):
+    if (ht<27.5):
         return 1
-    elif(ht<27.5 and ht!=0):
+    elif(ht>=27.5 and ht!=0):
         return 0
     else: 
         return 0
