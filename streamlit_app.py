@@ -1,39 +1,174 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+def X1(ht): # usia
+    if (ht>=27.5):
+        return 13
+    elif(ht<27.5 and ht!=0):
+        return -3
+    else: 
+        return 0
+def X2(jk): #jenis kelamin
+    if (jk=='L'):
+        return 7
+    elif(jk=='P'):
+        return -2
+    else:
+        return 0
 
-with st.sidebar:
-    selected = option_menu("Sampling", ["DeskKat", 'DeskNum','AnakatTB','AnakatB','AnumTB','AnumB'], 
-        icons=[], menu_icon=[], default_index=0)
-    st.write(f"${'Z_\\alpha='}$1.96")
-    st.write(f"${'Z_\\beta='}$0.84")
-    st.write(f"${'d='}$Presisi")  
+def X3(ht): #HT
+    if (ht=='Ya'):
+        return -9
+    elif(ht=='Tidak'):
+        return 2
+    else:
+        return 0
 
-with st.container():
-    if selected=="DeskKat":
-        st.latex(r'''n=\frac{Z_\alpha.P. Q}{d^2} ''') 
-        st.write(f"${'P='}$ variabel yang diteliti")        
-        st.write(f"${'Q=1-P'}$")
-        Za=st.text_input('$ Z_\\alpha $',value="1.96") 
-        P=st.text_input('$ P $',value=".8")    
-        Q=st.text_input('$ Q $',value=".2")
-        d=st.text_input('$ d $',value=".1")      
-        st.write(eval(Za)*eval(P)*eval(Q)/eval(d)**2)
-    elif (selected=="DeskNum"):
-        st.latex(r'''n=\Bigg(\frac{Z_\alpha.S. Q}{d}\Bigg)^2''') 
-    elif (selected=="AnakatTB"):
-        st.latex(r'''n=\Bigg(\frac{Z_\alpha \sqrt{2PQ} + Z_\beta \sqrt{P_1Q_1+P_2Q_2} }{P_1-P_2}\Bigg)^2''') 
-    elif (selected=="AnakatB"):
-        st.latex(r'''n=\frac{Z_\alpha.P. Q}{v^2} ''') 
-    elif (selected=="AnumTB"):
-        st.latex(r'''n=\frac{Z_\alpha.P. Q}{v^2} ''') 
-    elif (selected=="AnumB"):
-        st.latex(r'''n=\frac{Z_\alpha.P. Q}{v^2} ''')   
-        
+def X4(ht):  #lama setelah
+    if (ht>5.5 and ht!=0.0):
+        return 1
+    elif(ht<=5.5):
+        return -8
+    else:
+        return 0
 
-    #selected
+def X5(ht):  #lama terapi
+    if (ht>6.5 and ht!=0.0):
+        return 9
+    elif(ht<=6.5):
+        return -3
+    else:
+        return 0
+    
+def X6(ht): #LHR
+    if (ht>4.5):
+        return 3
+    elif(ht<=4.5 and ht!=0):
+        return -8
+    else:
+        return 0
 
-# horizontal Menu
-    #selected2 = option_menu(None, ["Home", "Upload", "Tasks", 'Settings'], 
-    #icons=['house', 'cloud-upload', "list-task", 'gear'], 
-   # menu_icon="cast", default_index=0, orientation="horizontal")
-   # selected2
+def X7(ht): #PE
+    if (ht=='Ya'):
+        return -12
+    else:
+        return 1
+ 
+def X8(ht): #rtds
+    if (ht<126.4):
+        return -5
+    elif(ht>=126.4 and ht!=0):
+        return 8
+    else:
+        return 0
+
+def X9(ht): #rtdd
+    if (ht<79.5):
+        return -6
+    elif(ht>=79.5 and ht!=0):
+        return 18
+    else:
+        return 0
+def X10(ht): #map
+    if (ht<90.6):
+        return -7
+    elif(ht>=90.6 and ht!=0):
+        return 9
+    else:
+        return 0
+
+def X11(ht): #imt
+    if (ht<22.7):
+        return -6
+    elif(ht>=22.7 and ht!=0):
+        return 12
+    else: 
+        return 0
+
+def X12(ht):
+    if (ht<2.36):
+        return -13
+    elif(ht>=2.36 and ht!=0):
+        return 6
+    else: 
+        return 0 
+st.markdown("""
+<style>
+.big-font {
+    font-size:25px !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown('<p class="big-font">Prediksi Disfungsi Kardiak <br> pada pasien Graves Disease dalam terapi ATD</p>', unsafe_allow_html=True)    
+left,midle,right,right1=st.columns([2 ,2,2,3])
+with left:    
+    x1=st.text_input('Umur (tahun)',"")   
+    x2=st.radio('Jenis Kelamin',["L", "P"],horizontal=True,index=1)
+    x3=st.radio('Hipertensi',["Ya", "Tidak","NA"],horizontal=True,index=1)
+    x4=st.text_input('Lama gejala hilang setelah berobat (bulan)',"")
+
+with midle:
+    x5=st.text_input('Lama terapi ATD (bulan)',"")
+    x6=st.text_input('Lama nadi <90 x/menit setelah minum obat (bulan)',"")
+    #x7=st.radio('Pitting Oedema',["Ya", "Tidak","NA"],horizontal=True,index=1)       
+    x8=st.text_input('Rerata Tekanan Darah Sistolik',"")
+    x9=st.text_input('Rerata Tekanan Darah Distolik',"")
+with right:
+    x10=st.text_input('Rerata Mean Arterial Pressure',"")
+    x11=st.text_input('Rerata Indek Massa Tubuh',"")    
+    x12=st.text_input('Kadar fT4 awal',"")      
+
+    if (x1==''):
+        x1=0
+    else:
+        x1=float(x1)
+
+    if (x4==''):
+            x4=0
+    else:
+        x4=float(x4)       
+
+    if (x5==''):
+        x5=0
+    else:
+        x5=float(x5)    
+ 
+
+    if (x6==''):
+        x6=0
+    else:
+        x6=float(x6)  
+    if (x8==''):
+        x8=0
+    else:
+        x8=float(x8)              
+
+    if (x9==''):
+        x9=0
+    else:
+        x9=float(x9)    
+
+    if (x10==''):
+        x10=0
+    else:
+        x10=float(x10)    
+
+    if (x11==''):
+        x11=0
+    else:
+        x11=float(x11)  
+    if (x12==''):
+        x12=0
+    else:
+        x12=float(x12)  
+with right1:
+    total=X1(x1)+X2(x2)+X3(x3)+X4(x4)+X5(x5)+X6(x6)+X8(x8)+X9(x9)+X10(x10)+X11(x11)+X12(x12)+18
+    st.write(X1(x1),X2(x2),X3(x3),X4(x4),X5(x5),X6(x6),X8(x8),X9(x9),X10(x10),X11(x11),X12(x12),18)
+   
+    st.write('skor total',total)   
+    x12=st.button("Prediksi")
+
+    if x12:
+        if total>10.5:
+                st.write('Disfungsi Kardiak : Ya')
+        else:
+                st.write('Disfungsi Kardiak : Tidak')
