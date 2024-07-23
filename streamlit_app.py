@@ -170,6 +170,6 @@ with right1:
     if x12:
         if total>10.5:
                 st.write('Disfungsi Kardiak : Ya')
-                st.write(f"${'Z_\\alpha='}$1.96")
+                st.latex('Z_\\alpha=')
         else:
                 st.write('Disfungsi Kardiak : Tidak')
