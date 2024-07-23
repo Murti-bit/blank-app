@@ -173,3 +173,4 @@ with right1:
                 st.latex('Z_\alpha=')
         else:
                 st.write('Disfungsi Kardiak : Tidak')
+                st.latex('Z_\alpha=')
