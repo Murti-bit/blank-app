@@ -31,9 +31,9 @@ def X4(ht):  #lama setelah
         return 0
 
 def X5(ht):  #lama terapi
-    if (ht<6.5 and ht!=0.0):
+    if (ht<22.5 and ht!=0.0):
         return -109
-    elif(ht>=6.5):
+    elif(ht>=22.5):
         return 36
     else:
         return 0
@@ -53,9 +53,9 @@ def X7(ht): #PE
         return 1
  
 def X8(ht): #rtds
-    if (ht<126.4):
+    if (ht<126.5):
         return -17
-    elif(ht>=126.4 and ht!=0):
+    elif(ht>=126.5 and ht!=0):
         return 28
     else:
         return 0
