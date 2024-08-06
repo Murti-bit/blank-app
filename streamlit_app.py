@@ -69,9 +69,9 @@ def X9(ht): #rtdd
         return 0
 def X10(ht): #map
     if (ht<90.6):
-        return -6
+        return 6
     elif(ht>=90.6 and ht!=0):
-        return 8
+        return -8
     else:
         return 0
 
@@ -85,7 +85,7 @@ def X11(ht): #imt
 
 def X12(ht):
     if (ht<2.36):
-        return 131
+        return 130
     elif(ht>=2.36 and ht!=0):
         return -60
     else: 
@@ -168,7 +168,7 @@ with right1:
     x12=st.button("Prediksi")
 
     if x12:
-        if total>26.5:
+        if total<20.5:
                 st.write('Disfungsi Kardiak : Ya')
         else:
                 st.write('Disfungsi Kardiak : Tidak')
