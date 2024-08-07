@@ -168,7 +168,7 @@ with right1:
     x12=st.button("Prediksi")
 
     if x12:
-        if total<20.5:
+        if total<26.5:
                 st.write('Disfungsi Kardiak : Ya')
         else:
                 st.write('Disfungsi Kardiak : Tidak')
