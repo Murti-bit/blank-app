@@ -197,40 +197,22 @@ def hitung(x1,x2,x3,x4,x5,x6,x8,x9,x10,x11,x12):
        return "Kejadian Disfungsi Kardiak : Ya"
     else:
         return "Kejadian Disfungsi Kardiak : Tidak"
-with st.form('formku'):
-    left,midle,right=st.columns([2,2,2])
-    with left:    
-        x1=float(st.text_input('Umur/tahun',"13.3"))
-        x2=st.radio('Jenis Kelamin',["L", "P"],horizontal=True,index=1)
-        x3=st.radio('Hipertensi',["Ya", "Tidak"],horizontal=True,index=1)
-        x4=float(st.text_input('Lama gejala hilang setelah berobat/bulan',"3.3",help="boleh kosong"))
-
-    with midle:
-        x5=float(st.text_input('Lama terapi ATD/bulan',"12.2"))
-        x6=float(st.text_input('Lama nadi <90 x/menit setelah minum obat/bulan',"3.4"))
-        #x7=st.radio('Pitting Oedema',["Ya", "Tidak","NA"],horizontal=True,index=1)       
-        x8=float(st.text_input('Rerata Tekanan Darah Sistolik',"104"))
-        x9=float(st.text_input('Rerata Tekanan Darah Distolik',"88"))
-    with right:
-        x10=float(st.text_input('Rerata Mean Arterial Pressure',"67"))
-        x11=float(st.text_input('Rerata Indek Massa Tubuh',"22.2"))   
-        x12=float(st.text_input('Kadar fT4 awal',"2.8",help=" ")) 
-        st.form_submit_button(":blue[Prediksi]",on_click=st.write(hitung(x1,x2,x3,x4,x5,x6,x8,x9,x10,x11,x12)))         
-with st.expander('Petunjuk pengisian'):
-    st.markdown("""
-           Tidak boleh kosong : Umur Jeniskelamin dan HT\\
-           Isian numerik isi 0 kalo kosong\\
-          silakan diisi
-                
- """)
-
-
-    #st.write(X1(x1),X2(x2),X3(x3),X4(x4),X5(x5),X6(x6),X8(x8),X9(x9),X10(x10),X11(x11),X12(x12),18)
-  
-   # x12=st.button("Prediksi")
-
-   # if x12:
-   #     if total<20.5:
-   #             st.write('Disfungsi Kardiak : Ya')
-   #     else:
-   #             st.write('Disfungsi Kardiak : Tidak')
+left,midle,right=st.columns([2,2,2])
+with left:    
+    x1=float(st.text_input('Umur(tahun)',"13.3"))
+    x2=st.radio('Jenis Kelamin',["L", "P"],horizontal=True,index=1)
+    x3=st.radio('Hipertensi',["Ya", "Tidak"],horizontal=True,index=1)
+    x4=float(st.text_input('Lama gejala hilang setelah berobat(bulan)',"3.3",help="boleh kosong"))
+with midle:
+    x5=float(st.text_input('Lama terapi ATD(bulan)',"12.2"))
+    x6=float(st.text_input('Lama nadi <90 x/menit setelah minum obat(bulan)',"3.4"))
+    #x7=st.radio('Pitting Oedema',["Ya", "Tidak","NA"],horizontal=True,index=1)       
+    x8=float(st.text_input('Rerata Tekanan Darah Sistolik(mmHg)',"104"))
+    x9=float(st.text_input('Rerata Tekanan Darah Distolik(mmHg)',"88"))
+with right:
+    x10=float(st.text_input('Rerata Mean Arterial Pressure(mmHg)',"67"))
+    x11=float(st.text_input('Rerata Indek Massa Tubuh(Kg/m2)',"22.2"))   
+    x12=float(st.text_input('Kadar fT4 awal(ng/dl)',"2.8")) 
+    st.write(X1(x1),X2(x2),X3(x3),X4(x4),X5(x5),X6(x6),X8(x8),X9(x9),X10(x10),X11(x11),X12(x12),18)
+    st.button("Prediksi")
+    st.write(hitung(x1,x2,x3,x4,x5,x6,x8,x9,x10,x11,x12))            
