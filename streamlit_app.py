@@ -202,7 +202,7 @@ with left:
     x1=float(st.text_input('Umur(tahun)',"13.3"))
     x2=st.radio('Jenis Kelamin',["L", "P"],horizontal=True,index=1)
     x3=st.radio('Hipertensi',["Ya", "Tidak"],horizontal=True,index=1)
-    x4=float(st.text_input('Lama gejala hilang setelah berobat(bulan)',"3.3",help="boleh kosong"))
+    x4=float(st.text_input('Lama gejala hilang setelah berobat(bulan)',"3.3",help="palpitasi,sesak nafas,nyeri data dan tremor"))
 with midle:
     x5=float(st.text_input('Lama terapi ATD(bulan)',"12.2"))
     x6=float(st.text_input('Lama nadi <90 x/menit setelah minum obat(bulan)',"3.4"))
