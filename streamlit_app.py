@@ -194,15 +194,15 @@ def X12(ht):
 def hitung(x1,x2,x3,x4,x5,x6,x8,x9,x10,x11,x12):
     total=X1(x1)+X2(x2)+X3(x3)+X4(x4)+X5(x5)+X6(x6)+X8(x8)+X9(x9)+X10(x10)+X11(x11)+X12(x12)+18
     if total<20.5:
-       return "Kejadian Disfungsi Kardiak : Ya"
+       return "Prediksi Disfungsi Kardiak : Ya"
     else:
-        return "Kejadian Disfungsi Kardiak : Tidak"
+        return "Prediksi Disfungsi Kardiak : Tidak"
 left,midle,right=st.columns([2,2,2])
 with left:    
     x1=float(st.text_input('Umur(tahun)',"13.3"))
     x2=st.radio('Jenis Kelamin',["L", "P"],horizontal=True,index=1)
     x3=st.radio('Hipertensi',["Ya", "Tidak"],horizontal=True,index=1)
-    x4=float(st.text_input('Lama gejala hilang setelah berobat(bulan)',"3.3",help="palpitasi,sesak nafas,nyeri data dan tremor"))
+    x4=float(st.text_input('Lama gejala hilang setelah berobat(bulan)',"3.3"))
 with midle:
     x5=float(st.text_input('Lama terapi ATD(bulan)',"12.2"))
     x6=float(st.text_input('Lama nadi <90 x/menit setelah minum obat(bulan)',"3.4"))
@@ -214,5 +214,6 @@ with right:
     x11=float(st.text_input('Rerata Indek Massa Tubuh(Kg/m2)',"22.2"))   
     x12=float(st.text_input('Kadar fT4 awal(ng/dl)',"2.8")) 
     st.write(X1(x1),X2(x2),X3(x3),X4(x4),X5(x5),X6(x6),X8(x8),X9(x9),X10(x10),X11(x11),X12(x12),18)
-    st.button("Prediksi")
-    st.write(hitung(x1,x2,x3,x4,x5,x6,x8,x9,x10,x11,x12))            
+    st.write(hitung(x1,x2,x3,x4,x5,x6,x8,x9,x10,x11,x12))  
+st.write("Gejala : palpitasi,sesak nafas,nyeri data dan tremor")    
+st.markdown('<p class="small-font">  Didik Supriyadi Kusumo B, M. Robikhul Ikhsan, Hasanah Mumpuni <br>Departemen Ilmu Penyakit Dalam <br> FK-KMK UGM/RSUP Dr. Sardjito, Yogyakarta 2024</p>', unsafe_allow_html=True)          
