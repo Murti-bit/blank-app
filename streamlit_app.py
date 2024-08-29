@@ -215,5 +215,5 @@ with right:
     x12=float(st.text_input('Kadar fT4 awal(ng/dl)',"2.8")) 
     st.write(X1(x1),X2(x2),X3(x3),X4(x4),X5(x5),X6(x6),X8(x8),X9(x9),X10(x10),X11(x11),X12(x12),18)
     st.write(hitung(x1,x2,x3,x4,x5,x6,x8,x9,x10,x11,x12))  
-st.write("Gejala : palpitasi,sesak nafas,nyeri data dan tremor")    
+st.write("Gejala : palpitasi,sesak nafas,nyeri dada dan tremor")    
 st.markdown('<p class="small-font">  Didik Supriyadi Kusumo B, M. Robikhul Ikhsan, Hasanah Mumpuni <br>Departemen Ilmu Penyakit Dalam <br> FK-KMK UGM/RSUP Dr. Sardjito, Yogyakarta 2024</p>', unsafe_allow_html=True)          
