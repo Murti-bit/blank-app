@@ -193,7 +193,7 @@ def X12(ht):
         return 0  
 def hitung(x1,x2,x3,x4,x5,x6,x8,x9,x10,x11,x12):
     total=X1(x1)+X2(x2)+X3(x3)+X4(x4)+X5(x5)+X6(x6)+X8(x8)+X9(x9)+X10(x10)+X11(x11)+X12(x12)+18
-    if total<10.5:
+    if total<20.5:
        return "Kejadian Disfungsi Kardiak : Ya"
     else:
         return "Kejadian Disfungsi Kardiak : Tidak"
