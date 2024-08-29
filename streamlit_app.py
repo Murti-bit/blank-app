@@ -208,7 +208,7 @@ with midle:
     x6=float(st.text_input('Lama nadi <90 x/menit setelah minum obat(bulan)',"3.4"))
     #x7=st.radio('Pitting Oedema',["Ya", "Tidak","NA"],horizontal=True,index=1)       
     x8=float(st.text_input('Rerata Tekanan Darah Sistolik(mmHg)',"104"))
-    x9=float(st.text_input('Rerata Tekanan Darah Distolik(mmHg)',"88"))
+    x9=float(st.text_input('Rerata Tekanan Darah Diastolik(mmHg)',"88"))
 with right:
     x10=float(st.text_input('Rerata Mean Arterial Pressure(mmHg)',"67"))
     x11=float(st.text_input('Rerata Indek Massa Tubuh(Kg/m2)',"22.2"))   
