@@ -199,7 +199,7 @@ def hitung(x1,x2,x3,x4,x5,x6,x8,x9,x10,x11,x12):
         return "Prediksi Disfungsi Kardiak : Tidak"
 left,midle,right=st.columns([2,2,2])
 with left:    
-    x1=float(st.text_input('Umur(tahun)',"13.3"))
+    x1=float(st.text_input('Umur(tahun)',"23.3"))
     x2=st.radio('Jenis Kelamin',["L", "P"],horizontal=True,index=1)
     x3=st.radio('Hipertensi',["Ya", "Tidak"],horizontal=True,index=1)
     x4=float(st.text_input('Lama gejala hilang setelah berobat(bulan)',"3.3"))
